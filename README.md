@@ -20,6 +20,7 @@ A backend system that lets users upload financial data files (CSV/Excel), automa
 | Database | DuckDB | Runs analytical SQL directly on Pandas dataframes with no separate DB server needed — ideal for this use case |
 | LLM Layer | Groq (Llama 3.3 70B) | Fast inference, generous free tier, native JSON-mode output for reliable structured responses |
 
+**Note:** The LLM layer is abstracted through a single client initialization, so switching providers (e.g., to Gemini or OpenAI) would only require changing the client setup and API call syntax, not the overall logic.
 ## Architecture
 
 ```
